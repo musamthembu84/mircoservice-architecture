@@ -1,0 +1,31 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.4'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'MicroService'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'javax.persistence:javax.persistence-api:2.2'
+	implementation 'com.fasterxml.jackson.core:jackson-annotations:2.12.1'
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework:spring-web:5.3.4'
+	implementation 'org.springframework.data:spring-data-jpa:2.4.5'
+	implementation 'com.google.guava:guava:30.1-jre'
+	implementation 'org.springframework.security:spring-security-web:5.4.1'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.security:spring-security-test'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+	useJUnitPlatform()
+}
